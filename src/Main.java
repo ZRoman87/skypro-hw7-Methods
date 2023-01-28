@@ -5,8 +5,12 @@ public class Main {
     /* Задача 1
     Реализуйте метод, который получает в качестве параметра год, проверяет, является ли он високосным, и выводит результат в консоль.
     */
-    public static void checkLeapYear(int year) {
-        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+
+    public static boolean checkLeapYear(int year) {
+        return ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0));
+    }
+    public static void printYear(int year) {
+        if (checkLeapYear(year)) {
             System.out.println(year + " год - високосный год.");
         } else {
             System.out.println(year + " год - невисокосный год.");
@@ -59,7 +63,7 @@ public class Main {
         System.out.println("Задача 1");
 
         int year = 2015;
-        checkLeapYear(year);
+        printYear(year);
 
         System.out.println();
 
